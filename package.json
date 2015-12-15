@@ -1,16 +1,31 @@
 {
   "name": "react-admin",
   "version": "1.0.0",
-  "description": "Admin app with react.js",
+  "description": "Admin app with React.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzyszt/react-admin.git"
+  },
   "author": "Krzysztof Kaminski",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krzyszt/react-admin/issues"
+  },
+  "homepage": "https://github.com/krzyszt/react-admin#readme",
   "devDependencies": {
+    "browserify": "^12.0.1",
+    "flux": "^2.0.3",
     "gulp": "^3.9.0",
     "gulp-connect": "^2.2.0",
-    "gulp-open": "^1.0.0"
+    "gulp-eslint": "^1.1.1",
+    "gulp-open": "^1.0.0",
+    "react": "^0.13.3",
+    "react-router": "^0.13.3",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
