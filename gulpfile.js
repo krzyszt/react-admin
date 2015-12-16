@@ -19,6 +19,7 @@ var config = {
           'node_modules/bootstrap/dist/css/bootstrap.css',
             'node_modules/bootstrap/dist/css/bootstrap-theme.css'
         ],
+        images: './src/images/*.*',
         dist: './dist',
         mainJs: './src/main.js'
     }
@@ -48,6 +49,12 @@ gulp.task('css', function() {
     gulp.src(config.paths.css)
         .pipe(concat('bundle.css'))
         .pipe(gulp.dest(config.paths.dist + '/css'));
+});
+
+gulp.task('images', function() {
+    gulp.src(config.paths.images)
+        .pipe(gulp.dest(config.paths.dist + '/images'))
+        .pipe(connect.reload());
 })
 
 gulp.task('js', function() {
@@ -71,6 +78,6 @@ gulp.task('watch', function() {
     gulp.watch(config.paths.js, ['js', 'lint']);
 });
 
-gulp.task('default',['html', 'js', 'css', 'lint', 'open', 'watch'], function () {
+gulp.task('default',['html', 'js', 'css', 'images', 'lint', 'open', 'watch'], function () {
     console.log('default gulp task');
 });
